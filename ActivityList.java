@@ -10,14 +10,14 @@ import android.widget.ListView;
  */
 
 public class ActivityList extends AppCompatActivity {
-    String[]groups={"SampleTitle"};
+    String[]titles={"SampleTitle"};
     String[]descripions={""The more elements these two arrays have, the longer the list};
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list);
         ListView listView=findViewById(R.id.listView);
-        ListViewAdapter listViewAdapter=new ListViewAdapter(R.layout.activity_row,R.id.titl,R.id.idDescriptionGroup,this,groups,descripions);
+        ListViewAdapter listViewAdapter=new ListViewAdapter(R.layout.activity_list_row,R.id.itemTitle,R.id.subItem,this,titles,descripions);
         listView.setAdapter(listViewAdapter);
     }
 }
